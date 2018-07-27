@@ -1,6 +1,6 @@
-$Environment="#{Octopus.Environment.Name}"
+param([string]$Environment) 
 
-if($Environment -eq "#{Octopus.Environment.Name}") {
+if($Environment -eq "") {
 	$Environment="local"
 } else {
 	mv .\.env .\.env.old
