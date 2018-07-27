@@ -8,4 +8,4 @@ if($Environment -eq "") {
 }
 $ProjectName="MyApp-$Environment"
 Write-Host Starting Project $ProjectName
-docker-compose --project-name $ProjectName up --detach --force-recreate 
+docker-compose --no-ansi --project-name $ProjectName up --detach --force-recreate
