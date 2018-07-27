@@ -8,4 +8,4 @@ if($Environment -eq "#{Octopus.Environment.Name}") {
 }
 $ProjectName="MyApp-$Environment"
 
-docker-compose --project-name $ProjectName up --detach 
+docker-compose --force-recreate --project-name $ProjectName up --detach 
